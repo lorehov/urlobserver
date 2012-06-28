@@ -14,3 +14,20 @@ class SimpleTest(TestCase):
         Tests that 1 + 1 always equals 2.
         """
         self.assertEqual(1 + 1, 2)
+
+class MainTest(TestCase):
+
+    def test_url_add(self):
+        pass
+
+    def test_check_urls(self):
+        pass
+
+    def test_subscriber_add(self):
+        pass
+
+    def test_subscriber_suspend(self):
+        pass
+
+    def test_subscriber_activate(self):
+        pass
