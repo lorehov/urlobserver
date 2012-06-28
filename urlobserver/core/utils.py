@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 import urllib
 import itertools
-from urlobserver.core import models
 
-def _make_response(url, remote_response):
-    request = urllib.Request(url)
-    request.add_data(remote_response)
-    return request
+from urlobserver.core import models
 
 def _make_request(worker, remote_url):
     proxies = {'http': 'http://%s:8888' % worker.domain_name}
@@ -23,4 +19,4 @@ def update_urls():
     for url in remote_urls:
         response = _make_request(workers.next(), url)
         for subscriber in url.subscribers:
-            urllib.urlopen(_make_response(subscriber.callback, response))
+            urllib.urlopen(subscriber.callback, data=response)
