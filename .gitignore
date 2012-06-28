@@ -3,5 +3,5 @@
 *.pyc
 .*.swp
 *~
-urlobserver/localsettings.py
-urlobserver/sqlite.db
+/urlobserver/localsettings.py
+/urlobserver/sqlite.db
