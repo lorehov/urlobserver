@@ -20,6 +20,8 @@ DATABASES = {
 SECRET_KEY = 'A secret key'
 
 # ec2 management related settings
+# please note that access to port 8888 must be available from all IPs
+# for your default AWS security group
 AWS_ACCESS_KEY = 'access-key-id'
 AWS_SECRET = 'access-key-secret'
 EC2_IMAGE_ID = 'ami-a29943cb'
