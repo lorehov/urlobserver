@@ -26,6 +26,7 @@ sudo apt-get --yes --force-yes update
 sudo apt-get --yes --force-yes install tinyproxy
 
 # Update tinyproxy config and reload the service
+echo 'DisableViaHeader Yes' >> /etc/tinyproxy.conf
 {% for ip in allowed_ips %}
 echo 'Allow {{ ip }}' >> /etc/tinyproxy.conf
 {% endfor %}
