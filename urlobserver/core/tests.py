@@ -17,17 +17,17 @@ class SimpleTest(TestCase):
 
 class MainTest(TestCase):
 
-    def test_url_add(self):
+    def test_subscription_add(self):
         pass
 
-    def test_check_urls(self):
-        pass
-
-    def test_subscriber_add(self):
+    def test_urls_check(self):
         pass
 
     def test_subscriber_suspend(self):
         pass
 
     def test_subscriber_activate(self):
+        pass
+
+    def test_url_update_failed(self):
         pass

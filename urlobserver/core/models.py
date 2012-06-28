@@ -11,16 +11,18 @@ class Subscriber(models.Model):
         (SUBSCRIBER_SUSPENDED, "Suspended"),
         (SUBSCRIBER_DELETED, "Deleted")
     ])
+
+    name = models.CharField(max_length=255)
     callback = models.CharField(max_length=1000)
-
-class Url(models.Model):
-    subscribers = models.ManyToManyField(Subscriber)
-
-    url = models.CharField(max_length=1000)
 
 class Worker(models.Model):
     url = models.CharField(max_length=1000)
 
+class Url(models.Model):
+    subscribers = models.ManyToManyField(Subscriber)
+    last_updated_by = models.ForeignKey(Worker, related_name='urls')
+
+    url = models.CharField(max_length=1000)
 
 def get_urls_to_check():
     '''
