@@ -16,11 +16,11 @@ class Subscriber(models.Model):
     callback = models.CharField(max_length=1000)
 
 class Worker(models.Model):
-    url = models.CharField(max_length=1000)
+    instance_id = models.CharField(max_length=255)
+    domain_name = models.CharField(max_length=1000)
 
 class Url(models.Model):
     subscribers = models.ManyToManyField(Subscriber)
-    last_updated_by = models.ForeignKey(Worker, related_name='urls')
 
     url = models.CharField(max_length=1000)
 
