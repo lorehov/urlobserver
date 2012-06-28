@@ -18,3 +18,16 @@ DATABASES = {
     }
 }
 SECRET_KEY = 'A secret key'
+
+# ec2 management related settings
+AWS_ACCESS_KEY = 'access-key-id'
+AWS_SECRET = 'access-key-secret'
+EC2_IMAGE_ID = 'ami-a29943cb'
+EC2_INSTANCE_TYPE = 't1.micro'
+
+EC2_SSH_PUBLIC_KEYS = [
+    'ssh-rsa my-ssh-key my-id',
+]
+EC2_ALLOWED_IPS = [
+    'ip.add.re.ss',
+]

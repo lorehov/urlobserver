@@ -65,6 +65,7 @@ INSTALLED_APPS = (
     'south',
     # internal apps
     'urlobserver.core',
+    'urlobserver.ec2_management',
 )
 
 LOGGING = {
