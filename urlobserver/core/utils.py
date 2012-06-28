@@ -21,6 +21,6 @@ def update_urls():
     workers = itertools.cycle(models.get_workers())
     remote_urls = models.get_urls_to_check()
     for url in remote_urls:
-        response = make_request(workers.next(), url)
+        response = _make_request(workers.next(), url)
         for subscriber in url.subscribers:
             urllib.urlopen(_make_response(subscriber.callback, response))
